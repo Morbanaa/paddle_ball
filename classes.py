@@ -13,12 +13,17 @@ class GameControl():
             for x in range(self.game_width):
                 if y == 0 or y == self.game_height -1 or x == 0 or x == self.game_width -1:
                     row.append("@")
+                else:
+                    row.append(" ")
             world_map.append(row)
         return world_map
 
 
-    def render_world():
-        pass
+    def render_world(self,world_map):
+        for y in range(self.game_height):
+            for x in range(self.game_width):
+                print(world_map[y][x])
+            print()
 
 
 class GameObject():
