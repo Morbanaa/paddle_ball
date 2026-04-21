@@ -7,21 +7,19 @@ class GameObject():
     def __init__(self,ypos,xpos):
         self.ypos = ypos
         self.xpos = xpos
-
-class Ball(GameObject):
-    def collison():
-        pass
-
-class Charactor(ABC,GameObject):
     @abstractmethod
     def update_position():
         pass
 
-class PlayerOne(Charactor):
+class Ball(GameObject):
     def update_position():
         pass
 
-class PlayerTwo(Charactor):
+class PlayerOne(GameObject):
+    def update_position():
+        pass
+
+class PlayerTwo(GameObject):
     def update_position():
         pass
     
