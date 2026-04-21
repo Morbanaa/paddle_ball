@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import platform
 import os
+import sys
 
 class GameControl():
     
@@ -20,6 +21,10 @@ class GameControl():
             self.world_map.append(row)
         return self.world_map
 
+    def clear_move_cursor(self):
+        sys.stdout.write("\033[H")
+        sys.stdout.flush()
+    
     def clear_screen():
         if platform.system() == "Windows":
             os.system("cls")
