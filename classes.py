@@ -2,12 +2,12 @@ from abc import ABC, abstractmethod
 
 class GameControl():
     
-    world_map = []
     def __init__(self,game_height,game_width):
         self.game_height = game_height
         self.game_width = game_width
+        self.world_map = []
 
-    def world_gen(self,world_map):      
+    def world_gen(self):      
         for y in range(self.game_height):
             row = []
             for x in range(self.game_width):
@@ -15,14 +15,14 @@ class GameControl():
                     row.append("@")
                 else:
                     row.append(" ")
-            world_map.append(row)
-        return world_map
+            self.world_map.append(row)
+        return self.world_map
 
 
-    def render_world(self,world_map):
+    def render_world(self):
         for y in range(self.game_height):
             for x in range(self.game_width):
-                print(world_map[y][x])
+                print(self.world_map[y][x],end="")
             print()
 
 
