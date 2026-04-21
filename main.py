@@ -1,4 +1,7 @@
+from classes import GameControl
 import main
+
+game_control = GameControl(30,90)
 
 def main():
     pass
