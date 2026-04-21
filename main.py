@@ -1,11 +1,11 @@
 from classes import GameControl
-import main
-
-game_control = GameControl(30,90)
 
 def main():
-    pass
+    game_control = GameControl(25,90)
+
+    game_control.world_gen()
+    game_control.render_world()
 
 #Program Entry Point
-if __name__ == "__main":
+if __name__ == "__main__":
     main()
