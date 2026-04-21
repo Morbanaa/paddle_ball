@@ -1,7 +1,12 @@
 from abc import ABC, abstractmethod
 
 class GameControl():
-    pass
+    def world_gen():
+        pass
+
+    def render_world():
+        pass
+
 
 class GameObject():
     def __init__(self,ypos,xpos):
